@@ -51,8 +51,8 @@ group :development do
 end
 
 group :production do
-  gem 'pg' #added from netflix
-  gem 'rails_12factor' #added from netflix
+  gem 'pg' #added from netflix (postgres, for heroku since heroku doesnt take sqlite)
+  gem 'rails_12factor' #(this is for heroku)
 end
 #ADDED FROM NETFLIX APP - END
 
