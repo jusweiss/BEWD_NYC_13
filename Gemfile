@@ -29,26 +29,35 @@ gem 'spring',        group: :development
 
 gem 'devise' #added from netflix
 
-gem 'simple_form', '~> 3.1.0rc1' #added from netflix
-
-
+#gem 'simple_form', '~> 3.1.0rc1' which simple form should we use?! one was from oauth class, one from netflix
 
 gem 'simple_form', '~> 3.0.2'
+
+#for Factual API
+require 'rest-client' 
+require 'JSON' 
+require 'factual' 
+
+#for oauth
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'koala'
+
 gem 'gritter', '~> 1.1.0' #found this online
 
-#ADDED FROM NETFLIX APP
 group :development do
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3' #added from netflix
-  gem 'pry-rails' #added from netflix
+  gem 'pry-rails' 
+  gem 'better_errors' #from oauth class
+  gem 'binding_of_called' #from oauth class
 end
 
 group :production do
   gem 'pg' #added from netflix
   gem 'rails_12factor' #added from netflix
 end
-#END ADDED FROM NETFLIX APP
+#ADDED FROM NETFLIX APP - END
 
 
 
