@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', :groups => [:development, :test] #https://github.com/bkeepers/dotenv
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#deleted sqlite3 from here bc now in developer gems below
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,6 +26,32 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+gem 'devise' #added from netflix
+
+gem 'simple_form', '~> 3.1.0rc1' #added from netflix
+
+
+
+gem 'simple_form', '~> 3.0.2'
+gem 'devise'
+gem 'gritter', '~> 1.1.0' #found this online
+
+#ADDED FROM NETFLIX APP
+group :development do
+# Use sqlite3 as the database for Active Record
+  gem 'sqlite3' #added from netflix
+  gem 'pry-rails' #added from netflix
+end
+
+group :production do
+  gem 'pg' #added from netflix
+  gem 'rails_12factor' #added from netflix
+end
+#END ADDED FROM NETFLIX APP
+
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
