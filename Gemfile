@@ -27,10 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'devise' #added from netflix
-
 #gem 'simple_form', '~> 3.1.0rc1' which simple form should we use?! one was from oauth class, one from netflix
-
 gem 'simple_form', '~> 3.0.2'
 
 #for Factual API
@@ -50,7 +47,7 @@ group :development do
   gem 'sqlite3' #added from netflix
   gem 'pry-rails' 
   gem 'better_errors' #from oauth class
-  gem 'binding_of_called' #from oauth class
+  gem 'binding_of_caller' #from oauth class
 end
 
 group :production do
