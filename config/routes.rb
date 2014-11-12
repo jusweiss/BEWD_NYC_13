@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'user/index'
+
   root 'homepage#index'
   devise_for :users, controllers: {omniauth_callbacks: :omniauth_callbacks}
   
   resources :homepage, only: [:index]
   resources :restaurants
+  resources :users
 
 
   

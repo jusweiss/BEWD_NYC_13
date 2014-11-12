@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '9742eb631eac9cb6935444b7afad9732b6330cd22ce65c911d699a3f36b537b24fedc0ee31fee0ec124487c8e3cde1754a18f732c3daa659f7265a61b4bc0244'
 
-  config.omniauth :facebook, "556523447812569", "551d4839abe019fb94daeed8a6c36fb0"
+  #config.omniauth :facebook, "556523447812569", "551d4839abe019fb94daeed8a6c36fb0"
 
   # App ID: 556523447812569
 # App Secret: 551d4839abe019fb94daeed8a6c36fb0

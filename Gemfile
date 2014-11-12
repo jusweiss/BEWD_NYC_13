@@ -31,9 +31,12 @@ gem 'spring',        group: :development
 gem 'simple_form', '~> 3.0.2'
 
 #for Factual API
-require 'rest-client' 
-require 'JSON' 
-require 'factual' 
+#require 'rest-client' 
+#require 'JSON' 
+#require 'factual' 
+
+gem 'rest-client'
+#gem 'factual'
 
 #for oauth
 gem 'devise'
@@ -55,6 +58,8 @@ group :production do
   gem 'rails_12factor' #(this is for heroku)
 end
 #ADDED FROM NETFLIX APP - END
+
+gem 'awesome_print' #learned this in creeper. pretty view for complex hashes (e.g. json)
 
 
 

@@ -1,4 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController #got this from lesson 14 materials
+
   def facebook
     auth_data = request.env['omniauth.auth'] #need to create this .env file and get a facebook key
     # auth_data = request.env['omniauth.auth']
@@ -7,8 +8,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController #got thi
       user.last_name = auth_data[:info][:last_name]
       user.facebook_token = auth_data[:credentials][:token]
     end
+
+
     sign_in @user
-    redirect_to root_path
+    redirect_to root_path #redirect to the get restaurants controller or list generator controller
   end
 end
 

@@ -1,21 +1,3 @@
-
-<h1>Welcome!</h1>
-<% if current_user %>
-  You are signed in as <%= current_user.full_name %><br>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook) %>
-<% end %>
-
-
-
-
-
-
-
-
-
-
 <!this was all the original placeholder homepage stuff>
 <h1>This is a placeholder homepage, homie</h1>
 <p>Find me in app/views/welcome/index.html.erb, homie</p>
@@ -30,3 +12,14 @@
 <h1>Welcome to HURDR</h1>
 <p>Please login or signup and then create your restaurant list:</p>
 <!link_to 'Restaurant List Generator', restaurant_path?>
+
+
+
+<% if current_user %>
+  You are signed in as <%= current_user.full_name %><br> <!why isnt this showing up?>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook) %>
+<% end %>
+
+<li><%= link_to "Profile", current_user %></li>

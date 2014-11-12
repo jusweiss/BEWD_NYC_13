@@ -1,0 +1,15 @@
+<%= simple_form_for @user do |f| %>
+  <div class="input-group">
+    <%= f.input :name, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="input-group">
+    <%= f.input :year_of_birth, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="input-group">
+    <%= f.input :thumbnail, class: 'form-control' %>
+  </div>
+  <br>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
