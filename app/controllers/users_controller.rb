@@ -12,32 +12,27 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
+  def update #what does this do?
     if @user.update_attributes(params[:user])
       redirect_to @user, notice: 'User was successfully updated.'
     else
       render action: 'edit'
     end
   end
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
  
   def new
-    @picture = Picture.new
+    @user = User.new
   end
 
   def edit
   end
 
 
-private
+private #what does any of this stuff do?
     
     def user_params
       params.require(:user).permit(:picture)
     end
-
 
     def set_user
       @user = User.find(params[:id])

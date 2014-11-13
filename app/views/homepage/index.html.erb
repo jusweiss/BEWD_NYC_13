@@ -16,7 +16,7 @@
 
 
 <% if current_user %>
-  You are signed in as <%= current_user.full_name %><br> <!why isnt this showing up?>
+  You are signed in as <%= current_user.full_name %><br> 
   <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook) %>
