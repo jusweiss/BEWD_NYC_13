@@ -1,9 +1,13 @@
-<%= simple_form_for @restaurant do |f| %>
+<%= form_tag(search_path) do |f| %>
   <div class="input-group">
-    <%= f.input :name, class: 'form-control' %>
+    <%= text_field_tag ("Name", method: :get) %>
+    <%= submit_tag %>
   </div>
   <br>
 <% end %>
+
+
+
 
 
 <!-- 

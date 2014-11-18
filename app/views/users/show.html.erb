@@ -1,1 +1,13 @@
-<%= @user.username %>
+<h2 class='text-center'><%= @user.full_name %></h2>
+<hr>
+<br>
+<div class="row">
+  <div class="text-center">
+    <%= image_tag @user.picture %>
+  </div>
+
+  <h4>Restaurants:</h4>
+  <p><%= "[Show Restaurant List]" %></p>
+<!-- 
+  <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Destroy', user_path(@user), method: :delete %> -->
+</div>

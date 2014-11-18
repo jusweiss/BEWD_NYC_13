@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     unless @user == current_user
       redirect_to :back, :alert => "Access denied."
     end
+    @restaurants = @user.restaurants
   end
 
   def update #what does this do?
@@ -27,19 +28,23 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def destroy
+    @user = Movie.find(params[:id])
+    @user.destroy
+    redirect_to root_path, notice: 'Movie deleted'
+  end
 
 private #what does any of this stuff do?
     
-    def user_params
-      params.require(:user).permit(:picture)
-    end
+  def user_params
+    params.require(:user).permit(:picture)
+  end
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def validate_authorization_for_user
-       redirect_to root_path unless @user == current_user
-    end
+  def validate_authorization_for_user
+     redirect_to root_path unless @user == current_user
   end
 end

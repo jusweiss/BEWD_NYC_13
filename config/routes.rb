@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: :omniauth_callbacks}
   
   resources :homepage, only: [:index]
+  get "restaurants/search" => "restaurants#search", as: :search
   resources :restaurants
   resources :users
 

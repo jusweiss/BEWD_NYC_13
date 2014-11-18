@@ -22,4 +22,8 @@
   <%= link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook) %>
 <% end %>
 
-<li><%= link_to "Profile", current_user %></li>
+<li><%= link_to "View My Profile", current_user %></li>
+
+<li><%= link_to "View All Users", users_path %></li>
+
+<li><%= link_to "All Restaurants", restaurants_path %></li>

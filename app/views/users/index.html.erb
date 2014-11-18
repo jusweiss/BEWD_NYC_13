@@ -1,0 +1,13 @@
+<h1>All hurdr Users</h1>
+
+<h2 class='text-center'>All Users</h2>
+<hr>
+<br>
+<div class="row text-center">
+  <% @users.each do |user| %>
+    <div class="col-md-4">
+      <%= user.full_name %>
+      <p><%= image_tag user.picture %></p>
+    </div>
+  <% end %>
+</div>
