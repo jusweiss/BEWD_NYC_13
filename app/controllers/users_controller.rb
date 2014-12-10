@@ -28,11 +28,11 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def destroy
-    @user = Movie.find(params[:id])
-    @user.destroy
-    redirect_to root_path, notice: 'Movie deleted'
-  end
+  # def destroy
+  #   @user = User.find(params[:id])
+  #   @user.destroy
+  #   redirect_to root_path, notice: 'User deleted'
+  # end
 
 private #what does any of this stuff do?
     

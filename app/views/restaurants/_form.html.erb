@@ -1,21 +1,11 @@
-<%= form_tag(search_path) do |f| %>
+<%= form_tag(search_path, :method => 'get') do |f| %>
   <div class="input-group">
-    <%= text_field_tag ("Name", method: :get) %>
-    <%= submit_tag %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
   </div>
   <br>
 <% end %>
 
 
 
-
-
-<!-- 
-    t.string   "name"
-    t.string   "address"
-    t.string   "website"
-    t.string   "phone"
-    t.float    "lat"
-    t.float    "long"
-    t.datetime "created_at"
-    t.datetime "updated_at" -->

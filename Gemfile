@@ -31,12 +31,10 @@ gem 'spring',        group: :development
 gem 'simple_form', '~> 3.0.2'
 
 #for Factual API
-#require 'rest-client' 
-#require 'JSON' 
-#require 'factual' 
+gem 'rest-client' 
+gem 'json' 
+gem 'factual-api'
 
-gem 'rest-client'
-#gem 'factual'
 
 #for oauth
 gem 'devise'

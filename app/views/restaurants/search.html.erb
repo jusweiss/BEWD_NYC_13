@@ -1,1 +1,18 @@
+<li><%= link_to "Home", root_path %></li>
 <%= render "form" %>
+
+<%= @factual_query = params[:search] %>
+
+ <br>
+
+<%  require 'factual'
+    factual = Factual.new(ENV['FACTUAL_API_KEY'], ENV['FACTUAL_API_SECRET'])
+    factual_array = factual.table("places-us").search("#{@factual_query}").filters("$and" => ["category_ids" => {"$includes_any" => [312, 347, 348, 349]}, "$or" => [{"locality" => {"$eq" =>"new york"}}, {"locality" => {"$eq" => "brooklyn"}}]]).rows
+    %>
+
+    <h4> Do you mean? </h4> <br>
+    
+    <% factual_array.each_with_index do |factual_array, index| %>
+      <%= "(#{index+1}) #{factual_array["name"]} at #{factual_array["address"]}?" %>
+    <% end %>  
+
